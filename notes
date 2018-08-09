@@ -1,0 +1,24 @@
+shebang for ruby: #!/usr/bin/ruby
+# Naming convention
+start with
+0. lower case: local variable, method name, method params
+1. underscore: same as above
+2. $: global variables
+3. @: instance variables
+4. @@: class variables
+5. Upper case: class, module, constant
+
+following initial character, name can have any combination of letters, digits, and underscores
+
+multiword names
+0. instance variables: separate words with underscore
+1. class names: Mixed cases
+
+method names can end with ?, ! and =
+
+
+#String
+double quotes "ex" ruby does substituion and interpolation. substitues backslashes such as \n, interpolates expressions #{expressions}.
+single quotes 'ex' ruby does minimal amount of work.
+
+
