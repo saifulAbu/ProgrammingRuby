@@ -5,16 +5,4 @@ class BookInStock
 		@isbn = isbn
 		@price = Float(price)
 	end
-
-	def to_s
-		"ISBN: #{@isbn}, price: #{@price}"
-	end
-
-	def test
-		@test
-	end
-
-	def test=(new_val)
-		@test = new_val
-	end
 end
