@@ -21,4 +21,35 @@ method names can end with ?, ! and =
 double quotes "ex" ruby does substituion and interpolation. substitues backslashes such as \n, interpolates expressions #{expressions}.
 single quotes 'ex' ruby does minimal amount of work.
 
+#puts vs p
+if to_s is not implemented puts only prints #<ClassName, UniqueId> for an object
+p prints internal fields of an object
 
+# array
+a = [ 1, 2, 3, 4, 5 ]
+# access array using [] operator
+# last index = -1
+a[-1]
+a[-99] #nil
+
+#[start_index, element_count]
+a[1, 3]
+
+#[start_index..end_index]
+a[1..3]
+
+#assign
+a = [1, 3, 5, 7, 9]
+a[1] = 'bat'
+a[-3] = 'cat'
+a[3] = [9, 8] #add an array on index 3
+
+a = [ 1, 3, 5, 7, 9 ]
+a[2, 2] = 'cat'
+a[2, 0] = 'dog'
+a[1, 1] = [9, 8, 7]
+a[0..3] = []
+a[5..6] = 99, 98
+
+#hash
+ruby retrives elements in the order they were inserted.

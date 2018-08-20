@@ -10,3 +10,4 @@ h = {:dog => 'canine', :cat => 99, :donkey => "asinine"}
 #syntactic sugar
 h = {dog: 'canine', cat: 'feline', donkey: 'asinine'}
 
+
