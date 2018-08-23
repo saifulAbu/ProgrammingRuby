@@ -53,3 +53,52 @@ a[5..6] = 99, 98
 
 #hash
 ruby retrives elements in the order they were inserted.
+
+#block
+block can be {} or do end
+blocks can only appear after method parameters of a function.
+# closure for block
+sum = 0
+[1, 2, 3, 4].each do |value|
+	sum += value
+end
+the sum variable above are the same in inside the block and outside of it.
+there are ways to let ruby know that we don't want the variable outside the block in inside the loop
+# declare the variable as parameter to block
+value = "some value"
+[ 1, 2 ].each {|value| puts value }
+
+# declare local variables
+square = "some shape"
+sum = 0
+[1, 2, 3, 4].each do |value; square|
+	square = value * value
+	sum += square
+end
+
+# iterators
+methods: map/collect, each, inject(works as reduce), find 
+
+:: each iterator
+f = file.open('testfile')
+f.each do |line|
+	puts "the line is #{line}"
+end
+
+if we need to know how many times it's iterating
+f.each.with_index do |line, index|
+	puts "Line #{index} is #{line}"
+end
+f.close
+
+:: inject iterator
+a = [1, 2, 3, 4, 5]
+total = a.inject(0) {|sum, elem| sum + element} #initially sum = 0
+
+total = a.inject {|sum, elem| sum + elem} #initially sum = a[0]
+
+total = a.inject(:+) #applies + method to all the elemens of a
+
+
+
+
