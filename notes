@@ -99,6 +99,19 @@ total = a.inject {|sum, elem| sum + elem} #initially sum = a[0]
 
 total = a.inject(:+) #applies + method to all the elemens of a
 
+# creating external enumerators
+a = [1, 2, 3, 'cat']
+h = {dog: 'canine', fox: "vulpine"}
 
+enum_a = a.to_enum
+enum_h = h.to_enum
+
+enum_a.next => 1
+enum_h.next => [:dog, "canine"]
+
+the loop method can iteratre over enum, it will stop when the enum has no more values
+loop do
+	puts #{enum.next}
+end
 
 
