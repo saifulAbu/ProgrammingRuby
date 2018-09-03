@@ -114,4 +114,7 @@ loop do
 	puts #{enum.next}
 end
 
+# Modules
+provides a namespace and prevent name clashes.
+supports mixin facility.
 
