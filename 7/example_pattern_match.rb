@@ -25,3 +25,26 @@ str.sub!(/i/, "*")
 str.gsub!(/t/, "T")
 puts str
 
+# all regular expression are object of Regexp
+str = "dog and cat"
+pattern = /nd/
+pattern =~ str # => 5
+str =~ pattern # => 5
+
+/mm|dd/ # => /mm|dd/
+Regexp.new("mm/dd") # => /mm|dd/
+%r{mm/dd} # => /mm|dd/
+
+# matching against patterns
+name = "Fats Waller"
+p name =~ /a/ # nil
+p name =~ /z/ # 1
+p /a/ =~ name # 1
+p /a/.match(name) # => #<MatchData "a">
+p Regexp.new("all").match(name)
+
+# matched part, pre matching, post matching
+$& #matched part
+$` #pre match 
+$' #post match
+
