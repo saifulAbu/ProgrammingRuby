@@ -28,4 +28,25 @@ p show_regexp(a, /[a-z][^a-z]/)
 # \W any character except a word character
 # \X an extended unicode grapheme(2 or more chars combine to form a singual visual character)
 
+# options specifier
+# (?d) ruby behavior
+# (?a) ASCII behavior
+# (?u) Unicode support
+puts "Option specifier"
+a = 'űber.'
+p show_regexp(a, /(?a)\w+/)
+p show_regexp(a, /(?d)\w+/)
+p show_regexp(a, /(?u)\w+/)
+
+p show_regexp(a, /(?d)\W+/)
+p show_regexp(a, /(?u)\W+/)
+
+# POSIX character class
+puts "POSIX"
+a = 'Price $12.'
+p show_regexp(a, /[aeiou]/)
+p show_regexp(a, /[[:digit:]]/)
+p show_regexp(a, /[[:space:]]/)
+p show_regexp(a, /[[:^alpha:]]/)
+p show_regexp(a, /[[:punct:]aeiou]/)
 
