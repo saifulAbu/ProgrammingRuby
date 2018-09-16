@@ -50,3 +50,31 @@ p show_regexp(a, /[[:space:]]/)
 p show_regexp(a, /[[:^alpha:]]/)
 p show_regexp(a, /[[:punct:]aeiou]/)
 
+# using backslash to match special characters
+puts 'escape character'
+a = 'see [The PickAxe-page 123]'
+p show_regexp(a, /[\]]/)
+p show_regexp(a, /[0-9\]]/)
+p show_regexp(a, /[\d\-]/)
+
+# intersection using &&
+a = 'now is the time'
+p a.gsub(/[a-z&&[^aeiou]]/, '*') # remove all the characters that are non-vowel by *
+
+#encoding aware matching
+puts "Encoding aware matching"
+string = "δy/δx = 2πx"
+p show_regexp(string, /\p{Alnum}/)
+p show_regexp(string, /\p{Digit}/)
+p show_regexp(string, /\p{Space}/)
+p show_regexp(string, /\p{Greek}/)
+p show_regexp(string, /\p{Graph}/)
+
+# . period to match any character
+puts "match period"
+a = 'It costs $12.'
+p show_regexp(a, /c.s/)
+p show_regexp(a, /./)
+p show_regexp(a, /\./)
+
+
