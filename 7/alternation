@@ -1,0 +1,6 @@
+require './show_match.rb'
+
+a = 'red ball blue sky'
+p show_regexp(a, /d|e/)
+p show_regexp(a, /al|lu/)
+p show_regexp(a, /red ball|angry sky/)
