@@ -34,7 +34,43 @@ pat = /(?<color>red|green|blue) \w+ \g<color> \w+/
 p pat =~ "red sun blue moon" # match
 p pat =~ "red sun white moon" # no-match
 
+# match string where braces are properly nested
+pat = /
+	\A
+		(?<brace_expr>
+			{
+				(
+					[^{}]           # anything other than braces
+				|									# ... or ...
+					\g<brace_expr>  # a nested brace expression
+				)*
+			}
+		)
+	\Z
+/x #allow spaces, indentation, documenatiation
 
+proper = "{my{name}}"
+improper = "{my{name}"
+puts "matching braces"
+p pat =~ proper
+p pat =~ improper
 
+# Nested groups
+palindrome_pat = 
+/
+	\A
+		(?<palindrome>
+				# nothing or
+			| \w # a single character or
+			|	(?:	# x <palindrome> x
+					(?<some_letter>\w)
+					\g<palindrome>
+					\k<some_letter+0> # the letter matched at the end of the inner palindrom will be the same letter that was at the start
+				)
+		)
+	\z
+/x
 
-
+puts "palindrome match"
+p palindrome_pat =~ "madam"
+p palindrome_pat =~ "ssss"
