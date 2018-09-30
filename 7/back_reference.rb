@@ -74,3 +74,4 @@ palindrome_pat =
 puts "palindrome match"
 p palindrome_pat =~ "madam"
 p palindrome_pat =~ "ssss"
+# useless commit
