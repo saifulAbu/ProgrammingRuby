@@ -18,4 +18,13 @@ sentence = %r{
 	The\s\g<opt_adj>\g<subject>\s\g<verb>\s\g<opt_adj>\g<object>
 }x
 
-md
+md = sentence.match("The cat drinks water")
+puts "The subject is #{md[:subject]} and the verb is #{md[:verb]}"
+
+md = sentence.match("The big dog eats smelly bones")
+puts "The last adjective in the second sentence is #{md[:adjective]}"
+
+sentence =~ "The gerbil generates big PDFs"
+puts "And the object in the last sentence is #{$~[:object]}"
+
+
