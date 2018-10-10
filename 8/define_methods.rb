@@ -37,4 +37,11 @@ p surround("elephant")
 p surround("fox")
 p surround("fox", 10)
 
-# dummy commit
+# variable length argument lists
+def varargs(arg1, *rest)
+	"arg1=#{arg1}. rest =#{rest.inspect}"
+end
+
+p varargs("one")
+p varargs("one", "two", "three")
+
