@@ -22,4 +22,4 @@ split_apart(1, 2)
 split_apart(1, 2, 3)
 split_apart(1, 2, 3, 4)
 
-
+# making blocks more dynamic page 121
