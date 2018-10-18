@@ -55,3 +55,4 @@ s[1] = 2
 s['cat', 'dog'] = 'enemies', 'german', 'useless'
 s[1,2,3]
 
+# consolation commit :)
