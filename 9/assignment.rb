@@ -39,3 +39,17 @@ end
 t = Test.new
 result = (t.val = 2) 
 result # => 2
+
+# parallel assignment
+a, b = 1, 2
+a, b = b, a # a =2, b = 1
+puts "a=#{a}, b=#{b}" 
+
+a = 1,2,3,4
+b = [1, 2, 3, 4]
+
+a, b = 1, 2, 3, 4 
+c, = 1,2,3,4
+puts "a=#{a}, b=#{b}, c=#{c}"
+
+
