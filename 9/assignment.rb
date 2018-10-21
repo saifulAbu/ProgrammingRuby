@@ -52,4 +52,7 @@ a, b = 1, 2, 3, 4
 c, = 1,2,3,4
 puts "a=#{a}, b=#{b}, c=#{c}"
 
+# splats and assignments
+a, b
+
 
