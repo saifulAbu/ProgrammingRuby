@@ -118,3 +118,6 @@ end
 provides a namespace and prevent name clashes.
 supports mixin facility.
 
+# special characters
+these characters are not matched in the pattern
+. * ^ + | \  ? $ () {} []
