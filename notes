@@ -121,8 +121,6 @@ supports mixin facility.
 # special characters
 these characters are not matched in the pattern
 . * ^ + | \  ? $ () {} []
-=======
+
 # dummy comment
-# dummy comment
-# page 137, loops 9.6
-# page 137, don't tell anyone ruby has primitive loops
+# break redo next
