@@ -122,5 +122,4 @@ supports mixin facility.
 these characters are not matched in the pattern
 . * ^ + | \  ? $ () {} []
 
-# dummy comment
-# break redo next
+# dummy commit
