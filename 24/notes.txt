@@ -1,3 +1,7 @@
 meta programming is programming that creates other program.
  
 Ruby has just a single underlying class and object structure.
+
+each object has a few flags, member variables and a ref to class object.
+
+a class has method definition and a ref to super class
