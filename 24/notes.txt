@@ -8,4 +8,4 @@ a class has method definition and a ref to super class
 
 metod calling mechanism:
 any time a method is called, ruby looks for the method in the built in read-only variable self's class object. if it finds the method there, it calls it. if it cannot find it, it goes to its super class and tries to find the method/variable.
-
+  
