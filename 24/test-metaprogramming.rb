@@ -14,5 +14,5 @@ end
 
 a = Test.new
 b = a.def
-a.ghi
+Test.ghi
 
