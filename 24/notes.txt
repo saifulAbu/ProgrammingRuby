@@ -19,3 +19,5 @@ end
 class Album < Logger
 	add_logging "CD"
 end
+
+
