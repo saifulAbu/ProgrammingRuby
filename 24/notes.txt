@@ -1,5 +1,5 @@
 meta programming is programming that creates other program.
- 
+
 Ruby has just a single underlying class and object structure.
 
 each object has a few flags, member variables and a ref to class object.
@@ -20,4 +20,4 @@ class Album < Logger
 	add_logging "CD"
 end
 
-
+dummy commit
