@@ -16,5 +16,15 @@ class MediaMail < Shipping
 end
 
 class FlatRatePriorityEnvelope < Shipping
-	
+	def self.can_ship(weight, international)
+		weight < 64 && !international 
+	end
 end
+
+class InternationalFlatRateBox < Shipping
+	def self.can_ship(weight, international)
+		weight < 9*16 && international
+	end
+end
+
+
