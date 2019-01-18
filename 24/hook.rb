@@ -27,4 +27,12 @@ class InternationalFlatRateBox < Shipping
 	end
 end
 
+puts "Shipping 160z domestic"
+puts Shipping.shipping_options(16, false)
+
+puts "\nShipping 90oz domestic"
+puts Shipping.shipping_options(90, false)
+
+puts "\nShipping 16oz international"
+puts Shipping.shipping_options(16, true)
 
