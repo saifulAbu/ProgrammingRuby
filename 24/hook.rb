@@ -1,6 +1,6 @@
 
 class Shipping
-	@children = []
+	 @children = []
 	#hook method
 	def self.inherited(child)
 		@children << child
