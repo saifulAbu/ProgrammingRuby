@@ -43,10 +43,33 @@ class Turtle
 			puts
 		end
 	end
+	private
+
+	def move
+		increment = @direction > 1 ? -1 : 1
+		if @direction.even?
+			@x += increment
+		else
+			@y += increment
+		end
+		mark_current_location
+	end
+
+	def mark_current_location
+		@board[[@x, @y]] = "#" if @pen_down
+	end
 end
-private
 
-def move
+turtle = Turtle.new
+turtle.walk do
+	3.times do
+		forward(8)
+		pen_down
+		4.times do
+			forward(8)
+			left
+		end
+		pen_up
+	end
 end
-
-
+turtle.draw
