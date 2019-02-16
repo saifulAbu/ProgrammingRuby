@@ -1,5 +1,6 @@
 
 
+
 class Shipping
 	 @children = []
 	#hook method
