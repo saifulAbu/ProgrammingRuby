@@ -21,9 +21,15 @@ class TestFinder < Test::Unit::TestCase
 				assert_equal ["cat"], @finder.lookup("cat")
 			end
 
-			# should return word
+			should "return word if anagram given" do
+				assert_equal ["cat"], @finder.lookup("act")
+				assert_equal ["cat"], @finder.lookup("tca")
+			end
 
-			# should return nil
+			should "return nil if no word matches anagram" do
+				assert_nil @finder.lookup("wibble")
+			end
+
 		end
 
 	end
