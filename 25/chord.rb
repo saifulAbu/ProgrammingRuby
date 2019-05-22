@@ -1,4 +1,4 @@
-Node = Struct.new(:value) do
+Note = Struct.new(:value) do
 	def to_s
 		value.to_s
 	end
@@ -13,3 +13,19 @@ class Chord
 		@arr.join('-')
 	end
 end
+
+c = Chord.new (
+	[ Note.new("G"),
+		Note.new("Bb"),
+		Note.new("Db"),
+		Note.new("E")
+	]
+)
+
+File.open("posterity", "w+") do |f|
+	Marshal.dump(c, f)
+end
+
+chord = Marshal.load(File.open("posterity"))
+p chord.play
+
